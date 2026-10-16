@@ -2,9 +2,20 @@
 
 ### Turning Handwritten Digits into Intelligent Predictions with Deep Learning
 
+**🚀 Live Demo:** [Try DigitAI](https://handwritten-character-recognition-65s8oxzwqruvwtaxaefmab.streamlit.app/)
+
+**💻 GitHub Repository:** [View Source Code](https://github.com/vaishnavi-goyal/Handwritten-Character-Recognition)
+
 DigitAI is a Machine Learning and Computer Vision project that recognizes handwritten digits from **0 to 9** using a Convolutional Neural Network (CNN). Built with Python, TensorFlow and Streamlit, the application allows users to upload an image of a handwritten digit and receive a prediction with confidence information and class-wise probability visualization.
 
 ---
+
+## 🌟 Project Links
+
+| Resource | Link |
+|---|---|
+| 🚀 Live Application | [Open DigitAI](https://handwritten-character-recognition-65s8oxzwqruvwtaxaefmab.streamlit.app/) |
+| 💻 GitHub Repository | [View Source Code](https://github.com/vaishnavi-goyal/Handwritten-Character-Recognition) |
 
 ## ✨ Key Features
 
@@ -13,9 +24,9 @@ DigitAI is a Machine Learning and Computer Vision project that recognizes handwr
 - **Image Upload:** Supports PNG, JPG and JPEG images.
 - **Image Preprocessing:** Converts images to grayscale, adjusts contrast, resizes and normalizes them.
 - **Prediction Confidence:** Displays the probability assigned to the predicted digit.
-- **Probability Visualization:** Shows the model's probabilities for all ten digit classes.
-- **Interactive Web Interface:** Provides a modern, responsive Streamlit dashboard.
-- **Saved Model:** Stores the trained model for reuse without retraining every time.
+- **Probability Visualization:** Shows probabilities for all ten digit classes.
+- **Interactive Web Interface:** Provides a modern Streamlit dashboard.
+- **Saved Model:** Reuses the trained model without retraining for every prediction.
 
 ## 🛠️ Tech Stack
 
@@ -23,34 +34,30 @@ DigitAI is a Machine Learning and Computer Vision project that recognizes handwr
 |---|---|
 | Python | Core programming language |
 | TensorFlow / Keras | CNN model development and training |
-| NumPy | Numerical operations and array processing |
-| Pillow (PIL) | Image processing |
-| Matplotlib | Dataset visualization during training |
+| NumPy | Numerical operations |
+| Pillow | Image processing |
+| Matplotlib | Dataset visualization |
 | Pandas | Prediction probability data |
 | Streamlit | Interactive web application |
 | MNIST | Handwritten digit dataset |
 
 ## 🧠 Model Architecture
 
-The project uses a Convolutional Neural Network trained on the MNIST handwritten digit dataset.
-
-The model includes:
+The project uses a Convolutional Neural Network trained on the MNIST dataset.
 
 1. **Input Layer:** Accepts 28 × 28 grayscale images.
-2. **Convolutional Layer:** Extracts visual features from images.
-3. **Max Pooling Layer:** Reduces spatial dimensions.
-4. **Second Convolutional Layer:** Learns more complex patterns.
-5. **Second Max Pooling Layer:** Further reduces feature-map dimensions.
-6. **Flatten Layer:** Converts feature maps into a one-dimensional representation.
-7. **Dense Layer:** Learns relationships between extracted features.
-8. **Dropout Layer:** Helps reduce overfitting during training.
-9. **Output Layer:** Produces probabilities for the ten digit classes.
+2. **Convolutional Layers:** Extract visual features and patterns.
+3. **Max Pooling Layers:** Reduce spatial dimensions.
+4. **Flatten Layer:** Converts feature maps into a one-dimensional representation.
+5. **Dense Layer:** Learns relationships between extracted features.
+6. **Dropout Layer:** Helps reduce overfitting during training.
+7. **Output Layer:** Produces probabilities for ten digit classes.
 
-The model is compiled using the Adam optimizer and sparse categorical cross-entropy loss.
+The model uses the Adam optimizer and sparse categorical cross-entropy loss.
 
 ## 📊 Dataset
 
-This project uses the **MNIST handwritten digit dataset**, which contains 70,000 grayscale images of handwritten digits.
+This project uses the **MNIST handwritten digit dataset**, containing 70,000 grayscale images.
 
 - Training images: 60,000
 - Testing images: 10,000
@@ -62,30 +69,27 @@ Dataset source: [TensorFlow MNIST Dataset](https://www.tensorflow.org/api_docs/p
 ## 📁 Project Structure
 
 ```text
-Handwritten_Character_Recognition/
+Handwritten-Character-Recognition/
 │
-├── venv/                          # Virtual environment
-├── train_model.py                 # CNN training and evaluation
-├── test_model.py                  # Prediction testing
-├── app.py                         # Streamlit web application
-├── handwritten_digit_model.keras  # Trained model
-├── requirements.txt               # Required libraries
-├── README.md                      # Project documentation
-└── screenshots/                   # Application screenshots
+├── app.py
+├── train_model.py
+├── test_model.py
+├── handwritten_digit_model.keras
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
-The `venv/` directory is local to your computer and should not be uploaded to GitHub.
+The `venv/` virtual environment is local to your computer and should not be uploaded to GitHub.
 
-## 🚀 Getting Started
+## 🚀 Run Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd Handwritten_Character_Recognition
+git clone https://github.com/vaishnavi-goyal/Handwritten-Character-Recognition.git
+cd Handwritten-Character-Recognition
 ```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual repository URL.
 
 ### 2. Create a virtual environment
 
@@ -107,13 +111,13 @@ python -m pip install -r requirements.txt
 
 ### 4. Train the model (optional)
 
-If the trained model file is not already available, run:
+If the trained model file is unavailable, run:
 
 ```bash
 python train_model.py
 ```
 
-The training script downloads the MNIST dataset when needed, trains the CNN, evaluates it on the test dataset and saves the model as `handwritten_digit_model.keras`.
+This trains the CNN on MNIST, evaluates it and saves the model as `handwritten_digit_model.keras`.
 
 ### 5. Test a prediction
 
@@ -121,9 +125,9 @@ The training script downloads the MNIST dataset when needed, trains the CNN, eva
 python test_model.py
 ```
 
-### 6. Launch the web application
+### 6. Launch the application
 
-Ensure `handwritten_digit_model.keras` is in the same directory as `app.py`, then run:
+Ensure `handwritten_digit_model.keras` is available in the same directory as `app.py`, then run:
 
 ```bash
 python -m streamlit run app.py
@@ -133,17 +137,17 @@ Open the local URL displayed in the terminal, usually `http://localhost:8501`.
 
 ## 💡 How to Use
 
-1. Launch the DigitAI application.
-2. Upload a clear image containing a single handwritten digit.
+1. Open the [DigitAI Live Application](https://handwritten-character-recognition-65s8oxzwqruvwtaxaefmab.streamlit.app/).
+2. Upload an image containing a single handwritten digit.
 3. Click **Recognize My Digit**.
 4. View the predicted digit and model confidence.
-5. Explore the probability chart to compare the model's predictions across all ten classes.
+5. Explore the probability chart for all ten digit classes.
 
 **Tip:** Use a large, clearly written digit on a plain background for better results.
 
-## 📈 Evaluation
+## 📈 Model Evaluation
 
-The training script evaluates the model on the MNIST test dataset and prints the test accuracy.
+The training script evaluates the CNN on the MNIST test dataset and prints the test accuracy.
 
 **Test Accuracy:** Add the actual percentage reported by your model after training.
 
@@ -151,18 +155,18 @@ Do not enter an estimated or unverified accuracy value.
 
 ## 🔮 Future Enhancements
 
-- Extend recognition to handwritten alphabets using an appropriate dataset such as EMNIST.
-- Improve image preprocessing for real-world handwriting.
+- Extend recognition to handwritten alphabets using a dataset such as EMNIST.
+- Improve preprocessing for real-world handwriting.
 - Add prediction history and downloadable results.
-- Explore model performance using a confusion matrix and per-class evaluation.
-- Deploy the application online for public access.
+- Evaluate performance using a confusion matrix and per-class metrics.
+- Explore additional model architectures and deployment improvements.
 
 ## ⚠️ Limitations
 
-- The current model recognizes digits, not complete words or sentences.
-- Performance on real-world photographs may differ from performance on MNIST test images.
-- Unusual handwriting, image noise, shadows and incorrect cropping may affect predictions.
-- The displayed confidence represents the model's estimated class probability and does not guarantee correctness.
+- The current model recognizes individual digits, not complete words or sentences.
+- Real-world photographs may produce different results from MNIST test images.
+- Shadows, noise, unusual handwriting and incorrect cropping can affect predictions.
+- Model confidence does not guarantee that a prediction is correct.
 
 ## 👩‍💻 Author
 
@@ -170,10 +174,12 @@ Do not enter an estimated or unverified accuracy value.
 
 Machine Learning | Deep Learning | Computer Vision
 
-## 📄 License
-
-This project is intended for educational and portfolio purposes. Add a suitable open-source license if you decide to distribute the project publicly.
+- [GitHub Profile](https://github.com/vaishnavi-goyal)
+- [Project Repository](https://github.com/vaishnavi-goyal/Handwritten-Character-Recognition)
+- [Live Project](https://handwritten-character-recognition-65s8oxzwqruvwtaxaefmab.streamlit.app/)
 
 ---
 
 ⭐ If you find this project useful, consider starring the repository!
+
+*Built with Python, TensorFlow, CNN and Streamlit.*
